@@ -28,7 +28,7 @@ def generate_content():
 root = tk.Tk()
 
 # create frame for div in root window to place widget in it
-canvas = tk.Canvas(root, width=500, height=500, bg='#faebd7')
+canvas = tk.Canvas(root, width=800, height=500, bg='#faebd7')
 canvas.pack()
 frame = tk.Frame(root, bg='white')
 frame.place(relwidth=.8, relheight=.8, relx=.1, rely=.1)
