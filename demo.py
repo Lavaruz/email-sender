@@ -2,21 +2,34 @@ import tkinter as tk
 import os
 from utils import emails
 
-    # This Function called when you press Send Email button
+def generate_window(msg, status=False):
+    bg = 'green' if status else 'red'
+    fg = 'white' if status else 'black'
+    window = tk.Tk()
+    window.title('STATUS')
+    window_label = tk.Label(window, text=msg, height=3,padx=100, bg=bg, fg=fg)
+    window_label.pack()
+    window.mainloop()
+
+
+# This Function called when you press Send Email button
 def generate_content():
     """Function to send email"""
-    contents = text_input.get('1.0',tk.END).strip().split('\n')
     msg = emails.generate_email(reciever=email_input.get(),
                                 subject=subject_input.get(),
-                                content='<br/>'.join(contents))
-    emails.send_email(msg)
+                                content=text_input.get('1.0',tk.END))
+    try:
+        emails.send_email(msg)
+        generate_window('SUCCESS: \nEmail Sent !', 'success')
+    except Exception as e:
+        generate_window('ERROR: \nPlease enter the correct value !')
 
-    # init tkinter window root
+# init tkinter window root
 root = tk.Tk()
 
+# create frame for div in root window to place widget in it
 canvas = tk.Canvas(root, width=500, height=500, bg='#faebd7')
 canvas.pack()
-    # create frame for div in root window to place widget in it
 frame = tk.Frame(root, bg='white')
 frame.place(relwidth=.8, relheight=.8, relx=.1, rely=.1)
 
