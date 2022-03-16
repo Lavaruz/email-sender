@@ -1,0 +1,15 @@
+assamim80@gmail.com
+181001qw
+
+# IMPORTANT !!!
+
+# Change email & password above by yours
+
+# You have to set Less Secure in Gmail setting first 
+# to be able to send email in a third party
+# ---
+# or if you can have 2-Step Verification 
+# you can make App Password for you above password
+# ---
+# Keep in mind if you not set one of 2 step above the smtp gmail server will refuse
+# your connection

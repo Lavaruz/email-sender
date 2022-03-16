@@ -2,12 +2,15 @@ import os
 import smtplib
 from email.message import EmailMessage
 
+with open('IMPORTANT!!!.txt') as file:
+    email_input = file.read().split('\n')[0:2]
+
     # you can change this variable value by your email and password
     # but keep in mind you have to activate less secure in your google setting first
     # or make some app password for EMAIL_PASS variable in google setting
-    
-EMAIL_USER = os.environ.get('EMAIL_USER')
-EMAIL_PASS = os.environ.get('PYTHON_EMAIL')
+# EMAIL_USER = os.environ.get('EMAIL_USER')
+# EMAIL_PASS = os.environ.get('PYTHON_EMAIL')
+EMAIL_USER, EMAIL_PASS = email_input
 
 def generate_email(reciever, subject, content):
     msg = EmailMessage()
