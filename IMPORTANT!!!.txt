@@ -1,10 +1,9 @@
+# Change this email & password by yours (don't delete this message)
 assamim80@gmail.com
 181001qw
 
 # IMPORTANT !!!
-
-# Change email & password above by yours
-
+# ---
 # You have to set Less Secure in Gmail setting first 
 # to be able to send email in a third party
 # ---
