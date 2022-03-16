@@ -1,6 +1,6 @@
 # Change this email & password by yours (don't delete this message)
 example@gmail.com
-(your app password here)
+(enter your app password here)
 
 # IMPORTANT !!!
 # ---
